@@ -24,6 +24,7 @@ def main():
         top100 = f.readlines()
         top100 = [i.strip() for i in top100]
     cd = load_pkl('cd.pkl')
+    n=1
     for w1 in top100:
         simlist = []
         for w2 in top100:
@@ -36,6 +37,7 @@ def main():
         else:
             with open('top_100_sim.txt','a') as f:
                 f.write(' '.join(simlist) + '\n')
+        n=n+1
 
               
             
